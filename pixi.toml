@@ -1,0 +1,31 @@
+[workspace]
+authors = ["Nacef Guessaymi <nacefguess@hotmail.com>"]
+channels = ["conda-forge"]
+name = "matlab"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+
+[environments]
+python = ["python"]
+matlab = ["matlab"]
+imagej = ["imagej"]
+
+[feature.python.dependencies]
+python = "*"
+matplotlib = "*"
+numpy = "*"
+scipy = "*"
+pyimagej = ">=1.8.0,<2"
+
+[feature.python.pypi-dependencies]
+pyabf = ">=2.3.8, <3"
+quickspikes = ">=2.0.7, <3"
+
+[feature.matlab.dependencies]
+octave = "*"
+
+[feature.imagej.dependencies]
